@@ -2,6 +2,12 @@ import { useState } from "react/cjs/react.development";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const Blog=()=>{
+    const navigate=useNavigate();
+    const[blogtitle, setBlogtitle]=useState('');
+    const[blogdescription, setBlogDescription]=useState('');
+    const[bimage, setBimage]=useState('');
+    const[blogger, setBlogger]=useState('');
+   
    
     const config={
         headers:{
