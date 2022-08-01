@@ -76,7 +76,7 @@ e.preventDefault();
                  <div className="signup-form " id="signup-form">
                      <form className="formSignup mt-5 border p-4 bg-light shadow">
                          <div className="row">
-                             <h3 className="dHeader text-center">Register here</h3>
+                             <h3 className="dHeader text-center">Register</h3>
                              {/* <p>{message}</p> */}
                              <div className="fc mb-3 col-md-12">
                                  <label>Role<span className="text-danger">*</span></label>
@@ -121,7 +121,7 @@ e.preventDefault();
 
 
                              <div className="fc mb-3 col-md-12">
-                                 <label>Password<span className="text-danger">*</span></label>
+                                 <label>password<span className="text-danger">*</span></label>
                                  <input type="password" name="password" className="form-control" placeholder="password" 
                                      value={password} onChange={(e)=>setPassword(e.target.value)}></input>
                                  
@@ -135,7 +135,7 @@ e.preventDefault();
                              </div>
                          </div>
                      </form>
-                     <p className="dButt text-center">If you dont have an Account, Click here <Link to="/Home"><i>Login</i></Link></p>
+                     <p className="dButt text-center">Dont have an Account, Click here <Link to="/Home"><i>Login</i></Link></p>
                  </div>
              </div>
          </div>
