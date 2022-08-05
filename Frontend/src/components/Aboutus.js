@@ -2,7 +2,30 @@ import './Css/Navbar.css'
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 const Aboutus=()=>{
-    
+    const [isAuth, setAuth] = useState(false)
+    let token = localStorage.getItem('token');
+    console.log()
+    useEffect(() => {
+        if(token){
+            setAuth(true)
+        }
+        else{
+            setAuth(false)
+        }
+    }, [token])
+    return(
+        <div className='ASS'>
+        <div className='AboutUs'>
+        <section class="header-section">
+        <div class="center-div font-weight-bold">
+            <h1 class="font-weight-bold">Welcome To The Donation Club </h1>
+            <p class="font-weight-bold">We are for each other</p>
+            {!isAuth && <div class="header-buttons">
+                <Link class="font-weight-bold" to="/Home">Login</Link>
+                <Link class="font-weight-bold" to="/Signup">SignUp</Link>
+            </div>}
+        </div>
+    </section>
 
     <section class="header-extradiv">
     <div class="container">
