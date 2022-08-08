@@ -11,7 +11,18 @@ const res = require('express/lib/response');
 
 module.exports.verifyCustomer=function(req, res, next){
 try{
-   
+    const token=req.headers.authorization.split(" ")[1];
+    const data=jwt.verify(token, "mysecretkey");
+
+    customer.findOne({_id:data.customerId}).then(function(result){
+        console.log(result)
+        req.customerInfo=result;
+        next();
+    })
+    .catch(function(e){
+        res.json({err:e})
+    })
+}
 catch(e){
     res.send({msg:"Invalid token"})
 }
