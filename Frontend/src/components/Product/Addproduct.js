@@ -10,33 +10,7 @@ const AddProduct=()=>{
     const[pimage, setPimage]=useState('');
     const[donerName, setDonerName]=useState('');
     
-    const ProductRegister=(e)=>{
-        e.preventDefault();
-        const config={
-            headers:{
-                Authorization: 'Bearer '+ localStorage.getItem('token')
-            }
-        }
-        
-        const productData=new FormData();
-        productData.append('pimage', pimage)
-        productData.append('productName', productName)
-        productData.append('desc', desc)
-        productData.append('donerName', donerName)
-
-        
-
-        // const productData={desc, productName}
-        axios.post("http://localhost:90/product/insert", productData, config)
-        .then(result=>{
-            if(result.data.success){
-                // alert("product added");
-                toast.success(result.data.msg,{
-                    position:"top-center"
-                })
-                navigate("/Myproduct");
-
-            }
+   
             else{
                 alert("Unable to add, please try again")
             }
