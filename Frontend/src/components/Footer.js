@@ -1,19 +1,7 @@
 import './Css/Navbar.css'
 const Footer=()=>{
     return(
-        <div class="d-flex flex-column h-100">
-
-    <section class="hero text-white py-5 flex-grow-1">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="display-4">We Lend a Helping hand</h3>
-                    <p class="fst-italic text-muted">
-                    You are not important because of how long you live, you are important because of how effective you live. The measure of life is not its duration, but its donation. Making a donation is the ultimate sign of solidarity.
-                         <a class="text-primary" href="https://bootstrapious.com/" target="_blank">HelpingHand</a></p>
-                </div>
-            </div>
-        </div>
+       
     </section>
 
 
