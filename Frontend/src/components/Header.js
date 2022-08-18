@@ -9,69 +9,7 @@ const Header=()=>{
     window.location.replace('/Home');
   }
   var menu;
-  if(localStorage.getItem('token')){
-    menu=(
-      <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav text-center">
-        <li className="nav-item">
-          <Link className="nav-link" to="/Myproduct">My Donation</Link>
-        </li>
-       {JSON.parse(localStorage.getItem('user')).role=='doner' &&  
-       <>
-       <li className="nav-item">
-          <Link className="nav-link" to="/Addproduct">AddDonation</Link>
-        </li>
-
-        <li className="nav-item">
-          <Link className="nav-link" to="/Blog">UploadBlog</Link>
-        </li>
-        // </>
-      }
-        <li className="nav-item">
-          <Link className="nav-link" to="/Myblog">MyBlog</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/Myprofile"> MyProfile</Link>
-        </li>
-       <div className='log'>
-       <li className='nav-item'>
-          <button className='logged btn btn-danger' onClick={logOut}>Log Out</button>
-        </li>
-       </div>
-      </ul>
-    </div>
-    );
-  }else{
-    menu=(
-    
-      <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav text-center">
-      <li className="nav-item">
-          <Link className="nav-link" to="/Home"> Home</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/"> About us</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/Myblog">Blogs</Link>
-        </li>
-
-      
-      <li className="nav-item">
-          <Link className=" log nav-link" to="/Signup"> SignUp</Link>
-        </li>
-      
-        
-       
-
   
-        
-      </ul>
-    </div>
-    );
-    
-
-  }
     return(
 
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
