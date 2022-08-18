@@ -14,7 +14,12 @@ router.post("/blog/insert",upload.single('bimage'),auth.verifyDoner, function(re
     const bimage=req.file.filename;
     const blogdescription=req.body.blogdescription;
     const blogger=req.body.blogger;
-
+    const blogData=new Blog({
+        blogtitle:blogtitle,
+        uid:uid,
+        bimage:bimage,
+        blogdescription:blogdescription,
+        blogger:blogger
    
     })
     blogData.save()
